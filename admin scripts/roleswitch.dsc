@@ -15,15 +15,15 @@ roleSwitchCommand:
         - else:
             - define Args <context.raw_args>
             - if <[Args]> == <empty>:
-                - narrate "<red>Please specify a role name!"
+                - narrate "<&[error]>Please specify a role name!"
             - if <player.in_group[<[Args]>]>:
-                - narrate "<red>You already have the <bold><[Args]><reset><red> role!"
+                - narrate "<&[error]>You already have the <bold><[Args]><reset><red> role!"
             - else if <server.permission_groups.contains_text[<[Args]>]>:
                 - wait 1t
                 - group set <[Args]>
                 - narrate "<green>Your role has been set to <blue><[Args]>"
             - else:
-                - narrate "<red>The role <bold><[Args]><reset><red> does not exist!"
+                - narrate "<&[error]>The role <bold><[Args]><reset><red> does not exist!"
 
 #roleswitchTabComplete and roleswitchTabComplete_rolename are required configuration as part of zozar_firehood's TabComplete Engine
 roleswitchTabComplete:
