@@ -28,5 +28,5 @@ smite_command:
             - if <[target].in_group[admin]>:
                 - narrate "<red>You cannot smite an admin!"
                 - stop
-            - announce "<gold><[user]> <gray>smited <[target].name>!"
+            - announce "<[target].name> was smited by the wrath of Zeus!"
             - strike <[target].location>
